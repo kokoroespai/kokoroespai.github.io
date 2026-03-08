@@ -194,12 +194,18 @@
     }
 
     .hero h1 {
+      display: flex;
+      align-items: center;
+      gap: 0.25em;
       font-size: 50px;
       font-weight: 400;
       color: var(--indigo);
       letter-spacing: 0.05em;
       text-align: left;
-      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 img {
+      display: block;
     }
 
     .changing-text {
@@ -207,6 +213,16 @@
       color: var(--orange);
       font-weight: 400;
       transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .hero-container {
+        text-align: center;
+      }
+
+      .hero h1 {
+        text-align: center;
+      }
     }
 
     /* ================================
@@ -776,8 +792,10 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-container">
-      <h1>Marta Rodríguez | Kokoro</h1>
-      <p class="changing-text" id="changingText">Psicopedagoga infantojuvenil</p>
+      <div class="hero-content">
+        <h1>Marta Rodríguez | <img src="./kokoro-full-purple-orange-3.png" alt="Kokoro" height="45" ></h1>
+        <p class="changing-text" id="changingText">Psicopedagoga infantojuvenil</p>
+      </div>
     </div>
   </section>
 
