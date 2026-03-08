@@ -142,8 +142,30 @@ header {
 }
 
 @media (max-width: 768px) {
+  .nav-menu {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
   .nav-links {
-    display: none;
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+    order: 1;
+    padding: 1rem 0 0;
+    gap: 0.25rem;
+  }
+
+  .nav-menu.is-open .nav-links,
+  nav.is-open .nav-links {
+    display: flex !important;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
   }
 
   .nav-social {

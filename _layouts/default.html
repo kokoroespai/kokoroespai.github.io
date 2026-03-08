@@ -28,5 +28,29 @@
   {{ content }}
 
   {% include footer.html %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('mobile-menu-btn') || document.querySelector('.mobile-menu-btn');
+      var nav = document.getElementById('nav-menu') || document.querySelector('.nav-menu');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      var linksWrap = document.getElementById('nav-links') || nav.querySelector('.nav-links');
+      if (linksWrap) {
+        var links = linksWrap.querySelectorAll('a');
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener('click', function() {
+            nav.classList.remove('is-open');
+            btn.setAttribute('aria-expanded', 'false');
+          });
+        }
+      }
+    });
+  </script>
 </body>
 </html>
