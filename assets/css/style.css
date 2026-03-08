@@ -192,12 +192,34 @@ header {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+
   .hero-container {
     text-align: center;
   }
 
+  .hero-content {
+    max-width: 100%;
+  }
+
   .hero h1 {
+    font-size: 28px;
     text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2em;
+    line-height: 1.2;
+  }
+
+  .hero h1 img {
+    height: 36px;
+    width: auto;
+  }
+
+  .changing-text {
+    font-size: 18px;
   }
 }
 
@@ -702,13 +724,6 @@ header {
   letter-spacing: 0.05em;
   line-height: 1.1;
   margin-bottom: 0.5rem;
-}
-
-.cta-left p {
-  font-size: 18px;
-  color: var(--indigo);
-  opacity: 0.7;
-  margin: 0;
 }
 
 .btn-large {
