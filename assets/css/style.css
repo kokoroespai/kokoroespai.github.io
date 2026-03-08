@@ -515,7 +515,7 @@ header {
 .proces-section .accordion-item {
   background: #e3e7fb;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 50px;
   padding: 5px 20px;
   box-shadow: none;
   overflow: visible;
