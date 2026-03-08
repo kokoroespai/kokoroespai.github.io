@@ -891,3 +891,120 @@ footer {
   margin: 0;
   line-height: 1.4;
 }
+
+.page-image-wrap {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.page-image-rect {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 5;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+/* Quadre Com he arribat fins aquí? (títol, text, després formació i especialització en 2 columnes) */
+.arribat-section {
+  padding: 2rem 0;
+}
+
+.arribat-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.arribat-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--indigo);
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.arribat-text {
+  margin-bottom: 2rem;
+}
+
+.arribat-text p {
+  font-size: 17px;
+  color: var(--dark);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.arribat-text p:last-child {
+  margin-bottom: 0;
+}
+
+.arribat-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.arribat-col-formacio h3,
+.arribat-col-especialitzacio h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--indigo);
+  margin: 0 0 0.5rem;
+}
+
+.arribat-col-formacio ul,
+.arribat-col-especialitzacio ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.arribat-col-formacio li,
+.arribat-col-especialitzacio li {
+  font-size: 16px;
+  color: var(--dark);
+  line-height: 1.5;
+  padding: 0.35rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.arribat-col-formacio li::before,
+.arribat-col-especialitzacio li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--indigo);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .arribat-box {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .arribat-title {
+    font-size: 24px;
+  }
+
+  .arribat-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ================================
+   MANERA
+================================ */
+.manera-content {
+  padding: 1.5rem;
+  background: none;
+  font-size: 18px;
+  color: var(--dark);
+  line-height: 1.5;
+}
